@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        const obj = {
+            name:"John",
+            age:20,
+            branch:{
+                branch1:"CSE",
+                branch2:"ECE",
+                subjects:{
+                    sub1:"Maths",
+                    sub2:"Physics"
+                }
+            }
+        }
+        const {name,age} = obj;
+        console.log(name)
+        console.log(age)
+
+        const {branch:{branch1:branch_1}} = obj;
+        console.log(branch_1)
+
+
+        const {branch1,branch2} = obj.branch
+        console.log(branch1)
+        console.log(branch2)
+
+        const arr = [1,2,[3,4,5]];
+        const [a,b,...rest] = arr;
+        console.log(a);
+        console.log(rest)
+
+        const arr1 = [...arr,5];
+        console.log(arr1);
+
+        let num = 6;
+        function add(){
+            let num = 10;
+            console.log(num);
+        }
+        add();
+        console.log(num)
+
+        const num1 = 6;
+        function add1(){
+            let num1 = 10;
+            console.log(num1);
+        }
+        add1();
+
+        // const num2 = 6;
+        // function add2(){
+        //      num2 = 10;
+        //     console.log(num2);   //uncaught TypeError: Assignment to constant variable.
+        // }
+        // add2();
+
+        let num3 = 6;
+        function add3(){
+            num3 = 10;
+            console.log(num3);
+        }
+        add3();
+
+
+
+
+    </script>
+</body>
+</html>
